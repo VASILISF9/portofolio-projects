@@ -72,6 +72,8 @@ SUM(total_laid_off) OVER(ORDER BY `MONTH`) AS rolling_total
 FROM rolling_total;
 
 -- rank year with most laid offs 
+
+
 SELECT company, YEAR(`date`), SUM(total_laid_off)
 FROM layoffs_staging2
 GROUP BY company, YEAR(`date`)
